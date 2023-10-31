@@ -1,0 +1,107 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-comp-sedan: 31, 77%, 52%;
+  --clr-comp-suv: 184, 100%, 22%;
+  --clr-comp-luxury: 179, 100%, 13%;
+
+  --clr-sedan: hsl(var(--clr-comp-sedan));
+  --clr-suv: hsl(var(--clr-comp-suv));
+  --clr-luxury: hsl(var(--clr-comp-luxury));
+
+  --clr-neutral-transp: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-light: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--clr-neutral-light);
+  min-height: 100vh;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.card {
+  max-width: 278px;
+  height: 500px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-size: 30px;
+  color: var(--clr-neutral-light);
+}
+
+.card p {
+  color: var(--clr-neutral-transp);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.card a {
+  font-family: "Lexend Deca", sans-serif;
+  border-radius: 26px;
+  padding: 1em 1.5em;
+  align-self: flex-start;
+  border: 2px solid var(--clr-neutral-light);
+  background-color: var(--clr-neutral-light);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sedans {
+  background-color: var(--clr-sedan);
+  color: var(--clr-sedan);
+}
+
+.suvs {
+  background-color: var(--clr-suv);
+  color: var(--clr-suv);
+}
+
+.luxury {
+  background-color: var(--clr-luxury);
+  color: var(--clr-luxury);
+}
+
+a:hover {
+  color: var(--clr-neutral-light);
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    justify-content: space-between;
+    height: 400px;
+  }
+
+  .card p {
+    margin-bottom: 1rem;
+  }
+}
